@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #d6d6d6;
+}
+
+.titulo-principal {
+    text-align: center;
+}
+
+hr{
+ margin: 1rem 0 1rem 0;   
+}
+
+a {
+    text-decoration: none;
+}
+
+a, p {
+    margin: 1rem 0 1rem 0; 
+}
+
+img {
+    margin: 1rem 0 1rem 1rem;
+    max-width: 70%;
+}
+
+em.different-name {
+    color: aqua;
+}
