@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+table {
+    border-spacing: 0;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+thead tr {
+    background-color: #6E6E6E;
+}
+
+td.first-element {
+    background-color: #CCFFFF;
+}
+
+td.second-element {
+    background-color: #98FF98;
+}
+
+thead tr th {
+    color: white;
+}
