@@ -1,0 +1,41 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    height: 7rem;
+    background: #8a9898;
+}
+
+header h1 
+{
+    text-align: center;
+}
+
+section 
+{
+    margin: 1rem 0 1rem 0;
+}
+
+h2.document-title {
+    color: cornflowerblue;
+}
+
+article 
+{
+    padding: 1rem;
+}
+
+footer 
+{
+    height: 7rem;
+    background: #898b8b;
+}
+
+footer p 
+{
+    text-align: center;
+}
