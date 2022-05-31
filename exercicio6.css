@@ -1,0 +1,16 @@
+table {
+    border: 1px solid gray;
+}
+
+table tr.modding {
+    background-color: #5EFB6E;
+}
+
+td img.img-home {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+tr td {
+    border: 1px solid gray;
+}
