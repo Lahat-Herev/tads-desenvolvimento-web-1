@@ -1,0 +1,105 @@
+header {
+    height: 25vh;
+    background: url(scared-cat.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header h1 {
+    text-align: center;
+}
+
+h1.h1-title {
+    color: #FFFFFF;
+}
+
+header nav {
+    display: block;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    background-color: #041B12;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline;
+    border: 2px solid #000;
+}
+
+aside
+{
+    display: block;
+    float: left;
+    width: 30%;
+    padding: 2.5rem 0 1rem 0;
+}
+
+ul
+{
+    list-style: none;
+}
+
+ul.aside-menu li
+{
+    line-height: 1.8;
+}
+
+ul.aside-menu li a
+{
+    color: #900C3F;
+    text-decoration: none;
+}
+
+ul.aside-menu li a.active
+{
+    background: #041B12;
+}
+
+main
+{
+    clear: right;
+    overflow: auto;
+}
+
+section {
+    margin: 1rem 0 1rem 0;
+}
+
+h3.hex-h3 {
+    background: #C5F670;
+}
+
+h2.document-title {
+    color: #a7d1fe;
+}
+
+article {
+    padding: 1rem;
+}
+
+p span
+{
+    color: #DF9BDF;
+}
+
+footer {
+    display: flex;
+    height: 7rem;
+    background: #898b8b;
+    justify-content: center;
+}
+
+footer p {
+    padding: 2rem;
+}
