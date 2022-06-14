@@ -1,6 +1,6 @@
 .grid {
 	display: grid;
-    margin: 0 auto;
+    margin: 0 2rem;
 	border: 1px solid #ccc;
 }
 
@@ -21,6 +21,17 @@ section.grid.grid-template-rows-1 div.main-inline-elements
     justify-self: center;
 }
 
+header h2 
+{
+	text-align: center;
+	font-size: 2rem;
+}
+
+h2
+{
+	color: #fff;
+}
+
 .inline-block-elements
 {
     margin: auto;
@@ -39,14 +50,29 @@ div.main-inline-elements div.item {
 body {
 	font-family: monospace;
 	color: #333;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	margin: 0px;
+	background: #31302D;
 }
 
 body > div {
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 body > div:nth-of-type(even) {
 	background: rgba(0,0,0,.03);
+}
+
+footer
+{
+	display: flex;
+	justify-content: center;
+	margin: 0 2rem;
+	background: #009494;
+}
+
+footer h2
+{
+	text-align: center;
+	font-size: 2rem;
 }
