@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+}
+
+.grid-template-columns-4 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+div.item.title {
+    background: #F0E5E5;
+    font-weight: bold;
+}
+
+.grid {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
