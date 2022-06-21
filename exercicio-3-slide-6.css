@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+.grid {
+	display: grid;
+}
+
+.grid-template-columns-3 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+	margin: 5px;
+	background: #5eca87;
+	text-align: center;
+	font-size: 1.5em;
+}
