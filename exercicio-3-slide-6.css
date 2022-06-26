@@ -1,16 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
 .grid {
 	display: grid;
 }
 
-.grid-template-columns-3 {
-	grid-template-columns: 1fr 1fr 1fr;
+.grid-template-task {
+	grid-template:
+		"header header header" minmax(100px, auto)
+		"sidenav content content" minmax(300px, auto)
+		"footer footer footer" minmax(100px, auto)
+		/ 1fr 3fr;
 }
 
+.header {
+	grid-area: header;
+	background: #7d8ffc;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidenav {
+	grid-area: sidenav;
+}
+
+.footer {
+	grid-area: footer;
+	background: #CCCCFF;
+}
+
+/* .center .footer
+{
+	align-self: center;
+} */
+
 .item {
-	margin: 5px;
-	background: #5eca87;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.2em;
+}
+
+.subgrid {
+	display: grid;
+	grid-template: 
+	"jungle onetitle secondtitle" minmax(100px, auto) 	
+	/ 1fr 1fr 1fr
+	;
+	border: 1px solid #ccc;
+}
+
+ul.options
+{
+	list-style-type: none;
+}
+
+.options li p
+{
+	text-align: left;
+}
+
+.subgrid-jungle-img
+{
+	max-width: 55%;
+	max-height: 55%;
+}
+
+.item .subgrid
+{
+	font-size: 1em;
+}
+
+.jungle 
+{
+	grid-area: jungle;
+}
+
+.onetitle 
+{
+	grid-area: onetitle;
+}
+
+.secondtitle
+{
+	grid-area: secondtitle;
+}
+
+.jungle, 
+.onetitle,
+.secondtitle
+{
+	border: 1px solid #ccc;
+} 
+
+.grid {
+	border: 1px solid #ccc;
 }
