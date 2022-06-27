@@ -12,36 +12,44 @@
         <form action="#" method="post">
             <section class="grid grid-form">
                 <div class="item nome">
-                    <label for="nome">
-                        Nome
+                    <label> 
+                        <h3>Nome: </h3>
+                        <input type="text" name="nome" id="nome" placeholder="Nome">
+                        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
                     </label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+                    
                 </div>
 
                 <div class="item usuario">
-                    <label for="usuario">Escolher um nome de usuario</label>
-                    <input type="text" name="usuario" id="usuario">
+                    <label>
+                        Escolher um nome de usuario
+                        <input type="text" name="usuario" id="usuario">
+                    </label>
+                    
                 </div>
 
                 <div class="item senha">
-                    <label for="senha">
+                    <label>
                         Criar uma senha
+                        <input type="text" name="senha" id="senha">
                     </label>
-                    <input type="text" name="senha" id="senha">
+                    
                 </div>
 
                 <div class="item confirmacaoSenha">
-                    <label for="confirmacaoSenha">
+                    <label>
                         Confirme sua senha
+                        <input type="text" name="confirmacaoSenha" id="confirmacaoSenha">
                     </label>
-                    <input type="text" name="confirmacaoSenha" id="confirmacaoSenha">
+                    
                 </div>
 
                 <div class="item dataNascimento">
-                    <input type="text" name="dia" id="dia" placeholder="Dia">
-                    <label for="mes">Data de nascimento: </label>
-                    <select name="nacionalidade" id="nacionalidade">
+                    <label>
+                        Data de nascimento: 
+                        <input type="text" name="dia" id="dia" placeholder="Dia">
+                    </label>
+                    <select name="mes" id="mes">
                         <option value="" selected>Mes</option>
                         <option value="janeiro">janeiro</option>
                         <option value="fevereiro">fevereiro</option>
@@ -51,19 +59,21 @@
                 </div>
 
                 <div class="item sexo">
-                    <label for="sexo">Sexo:  </label>
-                    <select name="sexo" id="sexo">
-                        <option value="" selected>Sou do sexo...</option>
-                        <option value="masculino">masculino</option>
-                        <option value="feminino">feminino</option>
-                    </select>
+                    <label>Sexo:  
+                        <select name="sexo">
+                            <option value="" selected>Sou do sexo...</option>
+                            <option value="masculino">masculino</option>
+                            <option value="feminino">feminino</option>
+                        </select>
+                    </label>
+                    
                 </div>
 
                 <div class="item celular">
-                    <label for="celular">
+                    <label>
                         Confirme sua senha
+                        <input type="text" name="celular" id="celular">
                     </label>
-                    <input type="text" name="celular" id="celular">
                 </div>
             </section>
         </form>

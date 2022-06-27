@@ -17,6 +17,11 @@
     ;
 }
 
+input 
+{
+    display: block;
+}
+
 .item
 {
     background: #f0ffff;
@@ -64,6 +69,12 @@
     grid-area: celular;
 } 
 
+.nome input,
+.dataNascimento input
+{
+    display: inline;
+}
+
 body {
 	font-family: monospace;
 	color: #333;
@@ -77,12 +88,6 @@ body > div {
 
 body > div:nth-of-type(even) {
 	background: rgba(0,0,0,.03);
-}
-
-body > div > img {
-	display: block;
-	margin: 0 auto;
-	max-width: 100%;
 }
 
 .grid {
