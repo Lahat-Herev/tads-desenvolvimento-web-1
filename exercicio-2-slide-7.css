@@ -1,0 +1,92 @@
+.grid
+{
+    display: grid;
+}
+
+.grid-form
+{
+    grid: 
+    "nome nome nome" minmax(100px, auto)
+    "usuario usuario usuario"  minmax(100px, auto)
+    "senha senha senha"  minmax(100px, auto)
+    "confirmacaoSenha confirmacaoSenha confirmacaoSenha"  minmax(100px, auto)
+    "dataNascimento dataNascimento dataNascimento"  minmax(100px, auto)
+    "sexo sexo sexo"  minmax(100px, auto)
+    "celular celular celular"  minmax(100px, auto)
+    / 1fr 
+    ;
+}
+
+.item
+{
+    background: #f0ffff;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* .center
+{
+    align-content: center;
+} */
+
+.nome
+{
+    grid-area: nome;
+}
+
+.usuario
+{
+    grid-area: usuario;
+}
+
+.senha
+{
+    grid-area: senha;
+}
+
+.confirmacaoSenha
+{
+    grid-area: confirmacaoSenha;
+}
+
+.dataNascimento
+{
+    grid-area: dataNascimento;
+}
+
+.sexo
+{
+    grid-area: sexo;
+}
+
+.celular 
+{
+    grid-area: celular;
+} 
+
+body {
+	font-family: monospace;
+	color: #333;
+	padding-bottom: 60px;
+	margin: 0px;
+}
+
+body > div {
+	padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+	background: rgba(0,0,0,.03);
+}
+
+body > div > img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.grid {
+	max-width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
