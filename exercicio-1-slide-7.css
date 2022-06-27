@@ -1,0 +1,80 @@
+.grid
+{
+    display: grid;
+}
+
+.grid-form
+{
+    grid: 
+    "nascimento nascimento nascimento" minmax(100px, auto) 
+    "escolaridade escolaridade escolaridade" minmax(100px, auto) 
+    "situacaoEscolaridade situacaoEscolaridade situacaoEscolaridade" minmax(100px, auto)
+    "nacionalidade nacionalidade nacionalidade" minmax(100px, auto)
+    "estado estado estado" minmax(100px, auto)
+    / 1fr
+    ;
+}
+
+.item
+{
+    background: #f0ffff;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.center
+{
+    align-content: center;
+}
+
+.nascimento
+{
+    grid-area: nascimento;
+}
+
+.escolaridade
+{
+    grid-area: escolaridade;
+}
+
+.situacaoEscolaridade
+{
+    grid-area: situacaoEscolaridade;
+}
+
+.nacionalidade
+{
+    grid-area: nacionalidade;
+}
+
+.estado
+{
+    grid-area: estado;
+}
+
+body {
+	font-family: monospace;
+	color: #333;
+	padding-bottom: 60px;
+	margin: 0px;
+}
+
+body > div {
+	padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+	background: rgba(0,0,0,.03);
+}
+
+body > div > img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.grid {
+	max-width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}

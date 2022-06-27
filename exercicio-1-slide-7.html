@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+    <link rel="stylesheet" href="exercicio-1-slide-7.css">
+</head>
+<body>
+    <div>
+        <form action="#" method="post">
+            <section class="grid grid-form center">
+                <div class="item nascimento">
+                    <label for="dataNascimento">
+                        Data de Nascimento
+                    </label>
+                    <input type="date" name="dataNascimento" id="dataNascimento">
+                </div>
+
+                <div class="item escolaridade">
+                    <label for="escolaridade">Escolaridade</label>
+                    <select name="escolaridade" id="escolaridade">
+                        <option value="fundamental" selected>Ensino Fundamental</option>
+                        <option value="medio">Ensino Médio</option>
+                        <option value="superior">Ensino Superior</option>
+                        <option value="posGraduacao">Superior pós-graduado</option>
+                        <option value="mestre">Mestre em alguma área</option>
+                        <option value="doutor">Doutor em alguma área</option>
+                    </select>
+                </div>
+
+                <div class="item situacaoEscolaridade">
+                    <label for="situacaoEscolaridade">
+                        <p>Situação da Escolaridade: <input type="radio" name="situacaoEscolaridade"> Completo <input type="radio" name="situacaoEscolaridade"> Incompleto</p> 
+                    </label>
+                    <label for="situacaoEscolaridade">
+                    </label>
+                </div>
+
+                <div class="item nacionalidade">
+                    <label for="nacionalidade">Nacionalidade: </label>
+                    <select name="nacionalidade" id="nacionalidade">
+                        <option value="brasil" selected>Brasil</option>
+                        <option value="paraguai">Paraguai</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+                </div>
+
+                <div class="item estado">
+                    <label for="estado">UF onde nasceu: </label>
+                    <select name="estado" id="estado">
+                        <option value="parana" selected>Paraná</option>
+                        <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                        <option value="santaCatarina">Santa Catarina</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <input type="submit" value="enviar">
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
