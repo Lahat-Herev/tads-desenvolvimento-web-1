@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
 body > div 
 {
 	padding: 40px 0;
@@ -51,4 +55,9 @@ section.grid.grid-form
     align-self: center;
     justify-self: center;
     color: #9f670d ;
+}
+
+input[type=text]
+{
+    box-sizing: border-box;
 }
