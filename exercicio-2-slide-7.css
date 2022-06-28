@@ -17,7 +17,7 @@
     ;
 }
 
-input 
+label.inline-form-elements input 
 {
     display: block;
 }
@@ -75,6 +75,11 @@ input
     display: inline;
 }
 
+label span 
+{
+    display: block;
+}
+
 body {
 	font-family: monospace;
 	color: #333;
@@ -91,7 +96,6 @@ body > div:nth-of-type(even) {
 }
 
 .grid {
-	max-width: 500px;
 	margin: 0 auto;
 	border: 1px solid #ccc;
 }
