@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+body > div 
+{
+	padding: 40px 0;
+}
+
+body 
+{
+	font-family: monospace;
+	color: #333;
+	margin: 0px;
+}
+
+section.grid.grid-form
+{
+    background: no-repeat center/100% url(images/coding.jpg);
+    padding: 3rem 0;
+}
+
+.heading
+{
+    color: #fff;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.grid h1
+{
+    text-align: center;
+}
+
+.grid-form
+{
+    grid: 
+    "nome" 100px
+    "email" 100px
+    "nascimento" 100px
+    "pais" 100px
+    "idade" 100px
+    "submit" 100px
+    / 1fr;
+}
+
+.item {
+    font-family: 'League Gothic', sans-serif;
+	font-size: 1.2em;
+    align-self: center;
+    justify-self: center;
+    color: #9f670d ;
+}
