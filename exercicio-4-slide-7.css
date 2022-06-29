@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+body > div 
+{
+	padding: 40px 0;
+}
+
+body
+{
+    font-family: 'League Gothic', sans-serif;
+    color: #333;
+    margin: 0px;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.grid-form
+{
+    grid: 
+    "nome rg" 200px
+    "cpf nomePai" 200px
+    "nomeMae escolaridade" 200px
+    "curso bolsaEstudos" 200px
+    "email senha" 200px
+    "turno submit" 200px
+    / 1fr 1fr;
+}
+
+.nome
+{
+    grid-area: nome;
+}
+
+.rg
+{
+    grid-area: rg;
+}
+
+.cpf
+{
+    grid-area: cpf;
+}
+
+.nomePai
+{
+    grid-area: nomePai;
+}
+
+.nomeMae
+{
+    grid-area: nomeMae;
+}
+
+.escolaridade
+{
+    grid-area: escolaridade;
+}
+
+.curso
+{
+    grid-area: curso;
+}
+
+.bolsaEstudos
+{
+    grid-area: bolsaEstudos;
+}
+
+.email
+{
+    grid-area: email;
+}
+
+.senha
+{
+    grid-area: senha;
+}
+
+.turno
+{
+    grid-area: turno;
+}
+
+
+.submit
+{
+    grid-area: submit;
+}
+
+
