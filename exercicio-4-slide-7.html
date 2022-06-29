@@ -9,93 +9,95 @@
 </head>
 <body>
     <div>
-        <section class="grid grid-form">
-            <div class="item nome">
-                <label> 
-                    Nome:
-                    <input type="text" name="nome">
-                </label>
-            </div> 
-            <div class="item rg">
-                <label> 
-                    RG:
-                    <input type="text" name="rg">
-                </label>
-            </div> 
-            <div class="item cpf">
-                <label> 
-                    CPF:
-                    <input type="text" name="cpf">
-                </label>
-            </div> 
-            <div class="item nomePai">
-                <label> 
-                    Nome do pai:
-                    <input type="text" name="nomePai">
-                </label>
-            </div> 
-            <div class="item nomeMae">
-                <label> 
-                    Nome da mãe:
-                    <input type="text" name="nomeMae">
-                </label>
-            </div> 
-            <div class="item escolaridade">
-                <label>
-                    Escolaridade:  
-                    <select name="escolaridade">
-                        <option value="ensinoFundamental" selected>Ensino Fundamental</option>
-                        <option value="ensinoMedio">Ensino Médio</option>
-                        <option value="ensinoSuperiorTecnologo">Tecnólogo</option>
-                        <option value="ensinoSuperiorBacharel">Bacharel</option>
-                    </select>
-                </label>
-            </div>
-            <div class="item curso">
-                <label>
-                    Curso:  
-                    <select name="curso" size="4">
-                        <option value="ensinoFundamental" selected>Ensino Fundamental</option>
-                        <option value="ensinoMedio">Ensino Médio</option>
-                        <option value="ensinoSuperiorTecnologo">Tecnólogo</option>
-                        <option value="ensinoSuperiorBacharel">Bacharel</option>
-                    </select>
-                </label>
-            </div>
-            <div class="item bolsaEstudos">
-                <label> 
-                    <span>Gostaria de solicitar uma bolsa de estudos?</span>
-                    <input type="checkbox" name="bolsaEstudos[]"> Iniciação científica
-                    <input type="checkbox" name="bolsaEstudos[]"> Monitoria
-                    <input type="checkbox" name="bolsaEstudos[]"> Estágio
-                </label>
-            </div> 
-            <div class="item email">
-                <label> 
-                    Email:
-                    <input type="email" name="email"> @ifpr.edu.br
-                </label>
-            </div> 
-            <div class="item senha">
-                <label> 
-                    Senha:
-                    <input type="password" name="senha"> 
-                </label>
-            </div> 
-            <div class="item turno">
-                <label> 
-                    <span>Escolha o turno do curso: </span>
-                    <input type="radio" name="turno"> Diurno 
-                    <input type="radio" name="turno"> Vespertino
-                    <input type="radio" name="turno"> Noturno
-                </label>
-            </div> 
-            <div class="item submit">
-                <label>
-                    <input type="submit" value="Enviar">
-                </label>
-            </div>
-        </section>
+        <form action="" method="post">
+            <section class="grid grid-form">
+                <div class="item nome">
+                    <label> 
+                        Nome:
+                        <input type="text" name="nome">
+                    </label>
+                </div> 
+                <div class="item rg">
+                    <label> 
+                        RG:
+                        <input type="text" name="rg">
+                    </label>
+                </div> 
+                <div class="item cpf">
+                    <label> 
+                        CPF:
+                        <input type="text" name="cpf">
+                    </label>
+                </div> 
+                <div class="item nomePai">
+                    <label> 
+                        Nome do pai:
+                        <input type="text" name="nomePai">
+                    </label>
+                </div> 
+                <div class="item nomeMae">
+                    <label> 
+                        Nome da mãe:
+                        <input type="text" name="nomeMae">
+                    </label>
+                </div> 
+                <div class="item escolaridade">
+                    <label>
+                        Escolaridade:  
+                        <select name="escolaridade">
+                            <option value="ensinoFundamental" selected>Ensino Fundamental</option>
+                            <option value="ensinoMedio">Ensino Médio</option>
+                            <option value="ensinoSuperiorTecnologo">Tecnólogo</option>
+                            <option value="ensinoSuperiorBacharel">Bacharel</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="item curso">
+                    <label>
+                        Curso:  
+                        <select name="curso" size="4">
+                            <option value="ensinoFundamental" selected>Ensino Fundamental</option>
+                            <option value="ensinoMedio">Ensino Médio</option>
+                            <option value="ensinoSuperiorTecnologo">Tecnólogo</option>
+                            <option value="ensinoSuperiorBacharel">Bacharel</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="item bolsaEstudos">
+                    <label> 
+                        <span>Gostaria de solicitar uma bolsa de estudos?</span>
+                        <input type="checkbox" name="bolsaEstudos[]"> Iniciação científica
+                        <input type="checkbox" name="bolsaEstudos[]"> Monitoria
+                        <input type="checkbox" name="bolsaEstudos[]"> Estágio
+                    </label>
+                </div> 
+                <div class="item email">
+                    <label> 
+                        Email:
+                        <input type="email" name="email"> @ifpr.edu.br
+                    </label>
+                </div> 
+                <div class="item senha">
+                    <label> 
+                        Senha:
+                        <input type="password" name="senha"> 
+                    </label>
+                </div> 
+                <div class="item turno">
+                    <label> 
+                        <span>Escolha o turno do curso: </span>
+                        <input type="radio" name="turno"> Diurno 
+                        <input type="radio" name="turno"> Vespertino
+                        <input type="radio" name="turno"> Noturno
+                    </label>
+                </div> 
+                <div class="item submit">
+                    <label>
+                        <input type="submit" value="Enviar">
+                    </label>
+                </div>
+            </section>
+        </form>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 body > div 
 {
-	padding: 40px 0;
+	margin: 40px;
 }
 
 body
@@ -27,6 +27,7 @@ body
     "email senha" 200px
     "turno submit" 200px
     / 1fr 1fr;
+    border: 1px solid #ccc;
 }
 
 .nome
@@ -90,4 +91,9 @@ body
     grid-area: submit;
 }
 
+.item
+{
+    justify-self: center;
+    align-self: center;
+}
 
