@@ -24,6 +24,6 @@ function somaNumeros(first, second)
 function verificaIgualdadeCalculo(first, second)
 {
     let mensagem;
-    mensagem = first == second ? `A soma dos numeros gerados (${first}) é igual ao resultado calculado (${second}). ` : `A soma dos numeros gerados (${first}) é diferente do resultado calculado (${second}).  `;
+    mensagem = first == second ? `A soma dos numeros gerados é igual ao resultado calculado (${second}). ` : `A soma dos numeros gerados é diferente do resultado calculado (${second}).  `;
     resultado.innerText = mensagem;
 }
