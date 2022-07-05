@@ -9,16 +9,25 @@
 <body>
     <main>
         <section>
-            <h2>Digite o nome do produto: </h2>
-            <input type="text" name="product" id="product-name">
+            <label>
+                <em>Digite o nome do produto:</em>
+                <input type="text" name="product" id="product-name">
+            </label>
         </section>
         <section>
-            <h2>Digite o preço do produto: </h2>
-            <input type="text" name="product-price">
+            <label>
+                <em>Digite o preço do produto: </em>
+                <input type="text" name="product-price" id="product-price">
+            </label>
+        </section>
+        <section>
+            <label>
+                <input type="button" value="Salvar" id="saveProduct">
+            </label>
         </section>
         <section>
             <h2>O resultado é: </h2>
-            <span id="result"></span>
+            <em id="result"></em>
         </section>
     </main>
     <script src="exercicio-3-javascript.js"></script>
