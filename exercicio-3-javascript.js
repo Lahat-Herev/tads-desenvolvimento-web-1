@@ -16,14 +16,14 @@ function carregarProdutos()
         let precoProduto = element.precoProduto;
         let $product_container = `
         <section class="product">
-            <header>
+            <section>
             <h2>Digite as informações do produto: </h2>
             <input class="nome" title="Nome do produto" type="text" value="${nomeProduto}">
             <input class="preco" title="Preço do produto" type="text" value="${precoProduto}">
-            </header>
             <section class="action">
                 <a href="#" class="salvar">Salvar</a>
                 <a href="#" class="remover">Remover</a>
+            </section>
             </section>
         </section>
         `;
@@ -52,7 +52,7 @@ function salvarProdutos()
         element.addEventListener("click", () => 
         {
             let nomeItem = element.parentElement.parentElement.querySelector(".nome").value;
-            let precoItem = element.parentElement.parentElement.querySelector(".idade").value;
+            let precoItem = element.parentElement.parentElement.querySelector(".preco").value;
             if (!nomeItem.length || !precoItem.length)
             {
                 alert("Por gentileza, informe o nome e o preço do produto.");
