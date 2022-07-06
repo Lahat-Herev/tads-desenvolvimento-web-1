@@ -1,20 +1,79 @@
-const productName = document.getElementById("product-name").value;
-const productPrice = document.getElementById("product-price").value;
-const saveProduct = document.getElementById("saveProduct");
-const result = document.getElementById("result");
+var produtos = [{nomeProduto: "Maçã", precoProduto: "7.5"}];
 
-const produtos = {
-    item: [{
-        productName,
-        productPrice
-    }]
-};
+function adicionarProdutos()
+{
+    produtos.push({nomeProduto: "", precoProduto: ""});
+    carregarProdutos();
+}
 
-function criaProduto(dados) {
-    produtos.item.push({
-        productName : dados.productName,
-        productPrice : dados.productPrice
+function carregarProdutos()
+{
+    let $productsContainer = document.getElementById("products"); 
+    $productsContainer.innerHTML = "";
+    produtos.forEach((element) => 
+    {
+        let nomeProduto = element.nomeProduto;
+        let precoProduto = element.precoProduto;
+        let $product_container = `
+        <section class="product">
+            <header>
+            <h2>Digite as informações do produto: </h2>
+            <input class="nome" title="Nome do produto" type="text" value="${nomeProduto}">
+            <input class="preco" title="Preço do produto" type="text" value="${precoProduto}">
+            </header>
+            <section class="action">
+                <a href="#" class="salvar">Salvar</a>
+                <a href="#" class="remover">Remover</a>
+            </section>
+        </section>
+        `;
+        $productsContainer.innerHTML += $product_container;
+    });
+    salvarProdutos();
+    removerProdutos();
+}
+
+function removerProdutos()
+{
+    document.querySelectorAll("#products .remover").forEach((element, selectedItem) => 
+    {
+        element.addEventListener("click", () => 
+        {
+            produtos.splice(selectedItem, 1);
+            carregarProdutos();
+        });
     });
 }
 
-saveProduct.addEventListener("click", criaProduto({productName : productName, productPrice : productPrice}));
+function salvarProdutos()
+{
+    document.querySelectorAll("#products .salvar").forEach((element, selectedItem) => 
+    {
+        element.addEventListener("click", () => 
+        {
+            let nomeItem = element.parentElement.parentElement.querySelector(".nome").value;
+            let precoItem = element.parentElement.parentElement.querySelector(".idade").value;
+            if (!nomeItem.length || !precoItem.length)
+            {
+                alert("Por gentileza, informe o nome e o preço do produto.");
+                return false;
+            }
+            produtos.splice(selectedItem, 1, 
+                {
+                    nomeProduto : nomeItem,
+                    precoProduto : precoItem
+                }
+            );
+            carregarProdutos();
+        });
+    });
+}
+
+document.getElementById("adicionarProduto").addEventListener("click", adicionarProdutos);
+carregarProdutos();
+
+document.getElementById("showItems").addEventListener("click", () => 
+{
+    document.getElementById("container-show-products-price").innerHTML = JSON.stringify(produtos, undefined, 4);
+});
+

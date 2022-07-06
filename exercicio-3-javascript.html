@@ -7,29 +7,25 @@
     <title>Exercício 3</title>
 </head>
 <body>
-    <main>
-        <section>
-            <label>
-                <em>Digite o nome do produto:</em>
-                <input type="text" name="product" id="product-name">
-            </label>
-        </section>
-        <section>
-            <label>
-                <em>Digite o preço do produto: </em>
-                <input type="text" name="product-price" id="product-price">
-            </label>
-        </section>
-        <section>
-            <label>
-                <input type="button" value="Salvar" id="saveProduct">
-            </label>
-        </section>
-        <section>
-            <h2>O resultado é: </h2>
-            <em id="result"></em>
+    <header>
+        <h2>Digite as informações do produto</h2>
+    </header>
+    <main class="products-list">
+        <section id="products">
+        
         </section>
     </main>
-    <script src="exercicio-3-javascript.js"></script>
+    <section>
+        <input type="button" id="adicionarProduto" value="Adicionar Produto">
+    </section>
+    <section>
+        <button id="showItems">
+            Visualizar lista de itens
+        </button>
+    </section>
+    <footer id="container-show-products-price">
+
+    </footer>
+    <script async defer src="exercicio-3-javascript.js"></script>
 </body>
 </html>
