@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h2
+{
+    font-family: 'Lato', sans-serif;
+}
+
+input 
+{
+    font-family: 'Mukta', sans-serif;
+}
+
+a
+{
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
+
+button
+{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.product
+{
+    display: grid;
+}
