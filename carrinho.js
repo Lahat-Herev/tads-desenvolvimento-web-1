@@ -4,6 +4,7 @@ function adicionarProdutos()
 {
     produtos.push({nomeProduto: "", precoProduto: ""});
     carregarProdutos();
+    travarOutros(document.querySelector("#products > section:last-child"));
 }
 
 function carregarProdutos()
@@ -29,6 +30,7 @@ function carregarProdutos()
     });
     salvarProdutos();
     removerProdutos();
+    travarOutros(false);
 }
 
 function removerProdutos()
@@ -56,13 +58,9 @@ function salvarProdutos()
                 alert("Por gentileza, informe o nome e o preço do produto.");
                 return false;
             }
-            produtos.splice(selectedItem, 1, 
-                {
-                    nomeProduto : nomeItem,
-                    precoProduto : precoItem
-                }
-            );
+            produtos.splice(selectedItem, 1, {nomeProduto : nomeItem, precoProduto : precoItem});
             carregarProdutos();
+            travarOutros(false);
         });
     });
 }
