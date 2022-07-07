@@ -65,6 +65,21 @@ function salvarProdutos()
     });
 }
 
+function travarOutros(element) {
+    if (element == false) {
+      document.querySelectorAll("#products button, #products > div").forEach((el) => {
+        el.classList.remove("disabled");
+      });
+      document.querySelector("#container-show-products-price").innerHTML = "";
+      return false;
+    }
+    document.querySelectorAll("#products button, #products > div").forEach((el) => {
+      if (el != element) {
+        el.classList.add("disabled");
+      }
+    });
+  }
+
 document.getElementById("adicionarProduto").addEventListener("click", adicionarProdutos);
 carregarProdutos();
 
