@@ -4,6 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+#products,
+.product
+{
+    display: grid;
+}
+
 h2
 {
     font-family: 'Lato', sans-serif;
