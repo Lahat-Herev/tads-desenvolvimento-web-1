@@ -16,7 +16,6 @@ input
 a
 {
     font-family: 'Josefin Sans', sans-serif;
-    text-decoration: none;
 }
 
 button
@@ -27,4 +26,10 @@ button
 .product
 {
     display: grid;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+    filter: grayscale(100%);
 }

@@ -1,25 +1,24 @@
-var produtos = [{nomeProduto: "Maçã", precoProduto: "7.5"}];
+var products = [{nameProduct: "Maçã", priceProduct: 7.5}];
 
 function adicionarProdutos()
 {
-    produtos.push({nomeProduto: "", precoProduto: ""});
+    products.push({nameProduct: "", priceProduct: "0"});
     carregarProdutos();
-    travarOutros(document.querySelector("#products > section:last-child"));
 }
 
 function carregarProdutos()
 {
     let $productsContainer = document.getElementById("products"); 
     $productsContainer.innerHTML = "";
-    produtos.forEach((element) => 
+    products.forEach((element) => 
     {
-        let nomeProduto = element.nomeProduto;
-        let precoProduto = element.precoProduto;
+        let nomeProduto = element.nameProduct;
+        let precoProduto = element.priceProduct;
         let $product_container = `
         <section class="product">
             <h2>Digite as informações do produto </h2>
             <input class="nome" title="Nome do produto" type="text" value="${nomeProduto}">
-            <input class="preco" title="Preço do produto" type="text" value="${precoProduto}">
+            <input class="preco" title="Preço do produto" type="number" value="${precoProduto}">
             <section class="action">
                 <a href="#" class="salvar">Salvar</a>
                 <a href="#" class="remover">Remover</a>
@@ -29,8 +28,21 @@ function carregarProdutos()
         $productsContainer.innerHTML += $product_container;
     });
     salvarProdutos();
-    removerProdutos();
-    travarOutros(false);
+} 
+
+function orcamentoProdutos()
+{
+    if (products.length == 1)
+    {
+        const valor = products.at(0).priceProduct;
+        return `O valor final ficou: ${valor}`;
+    }
+    if (products.length > 1) {
+        const prices = products.map((item) => item.priceProduct);
+        const initialValue = 0;
+        const sumPrices = prices.reduce((previousValue, currentValue) => parseFloat(previousValue) + parseFloat(currentValue), initialValue);
+        return `O valor final gira em torno de R$${sumPrices}`;
+    }
 }
 
 function removerProdutos()
@@ -39,7 +51,7 @@ function removerProdutos()
     {
         element.addEventListener("click", () => 
         {
-            produtos.splice(selectedItem, 1);
+            products.splice(selectedItem, 1);
             carregarProdutos();
         });
     });
@@ -53,38 +65,27 @@ function salvarProdutos()
         {
             let nomeItem = element.parentElement.parentElement.querySelector(".nome").value;
             let precoItem = element.parentElement.parentElement.querySelector(".preco").value;
-            if (!nomeItem.length || !precoItem.length)
+            if (!nomeItem.length)
             {
-                alert("Por gentileza, informe o nome e o preço do produto.");
+                alert("Por gentileza, informe o nome do produto.");
                 return false;
             }
-            produtos.splice(selectedItem, 1, {nomeProduto : nomeItem, precoProduto : precoItem});
+            if (!precoItem.length) {
+                alert("Por gentileza, informe o preço do produto.");
+                return false;
+            }
+            products.splice(selectedItem, 1, {nameProduct : nomeItem, priceProduct : precoItem});
             carregarProdutos();
-            travarOutros(false);
         });
     });
+    orcamentoProdutos();
 }
-
-function travarOutros(element) {
-    if (element == false) {
-      document.querySelectorAll("#products button, #products > div").forEach((el) => {
-        el.classList.remove("disabled");
-      });
-      document.querySelector("#container-show-products-price").innerHTML = "";
-      return false;
-    }
-    document.querySelectorAll("#products button, #products > div").forEach((el) => {
-      if (el != element) {
-        el.classList.add("disabled");
-      }
-    });
-  }
 
 document.getElementById("adicionarProduto").addEventListener("click", adicionarProdutos);
 carregarProdutos();
 
 document.getElementById("showItems").addEventListener("click", () => 
 {
-    document.getElementById("container-show-products-price").innerHTML = JSON.stringify(produtos, undefined, 4);
+    document.getElementById("container-show-products-price").innerHTML = orcamentoProdutos();
 });
 
