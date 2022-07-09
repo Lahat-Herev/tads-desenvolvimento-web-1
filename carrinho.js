@@ -28,26 +28,30 @@ function carregarProdutos()
         $productsContainer.innerHTML += $product_container;
     });
     salvarProdutos();
+    removerProdutos();
 } 
 
 function orcamentoProdutos()
 {
+    if (products.length == 0) {
+        return `Não há produtos para se ter um orçamento calculado.`;
+    }
     if (products.length == 1)
     {
         const valor = products.at(0).priceProduct;
-        return `O valor final ficou: ${valor}`;
+        return `Total: R$${valor}`;
     }
     if (products.length > 1) {
         const prices = products.map((item) => item.priceProduct);
         const initialValue = 0;
         const sumPrices = prices.reduce((previousValue, currentValue) => parseFloat(previousValue) + parseFloat(currentValue), initialValue);
-        return `O valor final gira em torno de R$${sumPrices}`;
+        return `Total: R$${sumPrices}`;
     }
 }
 
 function removerProdutos()
 {
-    document.querySelectorAll("#products .remover").forEach((element, selectedItem) => 
+    document.querySelectorAll(".action .remover").forEach((element, selectedItem) => 
     {
         element.addEventListener("click", () => 
         {
@@ -59,7 +63,7 @@ function removerProdutos()
 
 function salvarProdutos()
 {
-    document.querySelectorAll("#products .salvar").forEach((element, selectedItem) => 
+    document.querySelectorAll(".action .salvar").forEach((element, selectedItem) => 
     {
         element.addEventListener("click", () => 
         {
@@ -86,6 +90,6 @@ carregarProdutos();
 
 document.getElementById("showItems").addEventListener("click", () => 
 {
-    document.getElementById("container-show-products-price").innerHTML = orcamentoProdutos();
+    document.getElementById("preco").innerHTML = orcamentoProdutos();
 });
 

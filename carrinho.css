@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 h2
 {
@@ -28,8 +29,7 @@ button
     display: grid;
 }
 
-.disabled {
-    pointer-events: none;
-    opacity: .5;
-    filter: grayscale(100%);
+.preco
+{
+    font-family: 'Bebas Neue', cursive;
 }
