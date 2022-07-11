@@ -18,12 +18,6 @@ function result()
     });
 }
 
-// const result = new Promise((resolve, reject) => {
-//    try {
-//     resolve(randomImage())
-//    } catch (error) {reject(error)}
-// });
-
 async function changeImage()
 {
     let newImage = await result();
